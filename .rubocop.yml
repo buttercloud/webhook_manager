@@ -1,3 +1,6 @@
+AllCops:
+  SuggestExtensions: false
+
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
