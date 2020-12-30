@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
-  spec.add_dependency "faraday", ">= 1.2.0"
+  spec.add_dependency "faraday", "~> 0.17.3"
   spec.add_development_dependency "pry"
 
   # For more information and examples about making a new gem, checkout our
