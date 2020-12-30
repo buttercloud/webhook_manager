@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    webhook_manager (0.1.0)
+    webhook_manager (0.1.1)
       faraday (~> 0.17.3)
 
 GEM
