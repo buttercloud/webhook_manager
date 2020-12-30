@@ -12,7 +12,6 @@ Gem::Specification.new do |spec|
   spec.description   = "A gem to manage webhook triggers"
   spec.homepage      = "https://github.com/buttercloud/webhook_manager"
   spec.license       = "MIT"
-  spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
   spec.metadata["allowed_push_host"] = 'https://rubygems.org/'
 
