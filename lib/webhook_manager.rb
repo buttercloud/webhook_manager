@@ -60,7 +60,7 @@ module WebhookManager
       elsif res.status == 401
         raise Error.new("Unauthorized access to the API!")
       else
-        raise Error.new("Something went wrong calling the hooky API!")
+        raise Error.new("Something went wrong calling the hooky API! #{res.body}")
       end
     end
   end
