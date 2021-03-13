@@ -1,8 +1,6 @@
 # WebhookManager
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/webhook_manager`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A gem that integrates the https://gethooky.com API for plain Ruby or Ruby on Rails applications.
 
 ## Installation
 
@@ -22,7 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Initialize the class with your Hooky API key:
+
+```
+client = WebhookManager::Webhook.new(HOOKY_API_KEY)
+```
+
+2. Send your webhook
+
+Note: Payload expect a Ruby Hash. It will be automatically converted to JSON
+
+```
+client.trigger!(event_name: "any.event.name", payload: {foo: "bar"})
+```
 
 ## Development
 
