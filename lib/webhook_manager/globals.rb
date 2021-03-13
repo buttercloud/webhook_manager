@@ -1,0 +1,1 @@
+HOOKY_API = "https://app.hooky.me/api/v1".freeze

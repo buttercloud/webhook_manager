@@ -4,6 +4,7 @@ require "faraday"
 require "json"
 
 require_relative "webhook_manager/version"
+require_relative "webhook_manager/globals"
 
 module WebhookManager
   class Error < StandardError; end
@@ -11,9 +12,9 @@ module WebhookManager
   class Webhook
     attr_accessor :conn
 
-    def initialize(url, api_key)
+    def initialize(api_key)
       @conn = Faraday::Connection.new(
-        url: url,
+        url: HOOKY_API,
         headers: {
           "Authorization" => "ApiKey #{api_key}",
           "Content-Type" => "application/json"
