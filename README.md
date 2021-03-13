@@ -22,7 +22,7 @@ Or install it yourself as:
 
 1. Initialize the class with your Hooky API key:
 
-```
+```ruby
 client = WebhookManager::Webhook.new(HOOKY_API_KEY)
 ```
 
@@ -30,7 +30,7 @@ client = WebhookManager::Webhook.new(HOOKY_API_KEY)
 
 Note: Payload expect a Ruby Hash. It will be automatically converted to JSON
 
-```
+```ruby
 client.trigger!(event_name: "any.event.name", payload: {foo: "bar"})
 ```
 
