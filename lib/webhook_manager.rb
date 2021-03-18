@@ -36,7 +36,7 @@ module WebhookManager
 
     def update_status(event_id:, status:)
       begin
-        res = @conn.post("webhook_events/update_status", { event_id: event_id, status: status }.to_json)
+        res = @conn.post("webhook_events/update_status", { event_id: event_id, event_status: status }.to_json)
       rescue Faraday::ConnectionFailed => e
         raise Error.new("Could not connect to API")
       rescue Faraday::TimeoutError => e
