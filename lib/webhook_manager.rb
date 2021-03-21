@@ -24,7 +24,7 @@ module WebhookManager
 
     def trigger!(event_name:, payload:)
       begin
-        res = @conn.post("webhook_events/trigger", { event_name: event_name, event_payload: payload }.to_json)
+        res = @conn.post("webhook_events/trigger", {webhook_event: { event_name: event_name, event_payload: payload }}.to_json)
       rescue Faraday::ConnectionFailed => e
         raise Error.new("Could not connect to API")
       rescue Faraday::TimeoutError => e

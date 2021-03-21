@@ -1,1 +1,1 @@
-HOOKY_API = "https://app.hooky.me/api/v1".freeze
+HOOKY_API = "https://app.gethooky.com/api/v1".freeze
